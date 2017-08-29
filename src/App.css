@@ -1,0 +1,1290 @@
+
+/*
+//////////////////////////////////////////////////////
+                   Full App Styling
+//////////////////////////////////////////////////////
+*/
+.App {
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.noPadd {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.dropDownClicker {
+  position:absolute;
+  top:20px;
+  right:60px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+div {
+  max-width:inherit;
+}
+
+/*ol {
+  list-style-type: upper-roman;
+  color: #b58e12;
+  
+}*/
+
+ol { 
+  color: #b58e12;
+
+}
+
+.centered { 
+  text-align:center;
+  align-content:center; 
+}
+
+
+/*li {counter-increment: li}
+
+ol li::before {content: counter(li); color: #b58e12;
+    display: inline-block; width: 1em; margin-left: -2em;
+    margin-right: 0.5em; text-align: right; direction: rtl}*/
+
+
+/* Dashboard Buttons Overall Styling */
+
+.btnSilver, .btnGold {
+ 	  background: #1e1e1e;
+	  border: 2px solid transparent;
+    color:#fff;
+    max-width:150px;
+   
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+
+    font-family: 'Droid Sans', sans-serif;
+
+}
+
+
+.btnGoldExp {
+ 	  background: #1e1e1e;
+	  border: 2px solid transparent;
+    color:#fff;
+
+   
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+
+    font-family: 'Droid Sans', sans-serif;
+
+}
+
+
+.btnSilver h5, .btnGold h5, .btnGoldExp h5 {
+  padding-left:5px;
+}
+.btnGold:hover, .btnGoldExp:hover {
+    cursor:pointer;
+    background: #b58e12;
+
+}
+
+.btnSilver:hover {
+    cursor:pointer;
+    background: #7f7f7f;
+}
+
+.btnSilver h5, .btnGold h5, .btnGoldExp h5 {
+  margin:10px;
+  margin-left:15px;
+}
+
+
+/* Manage Project Button (silver) */
+
+.btnSilver{
+	  border-image: linear-gradient(to right, #7f7f7f 50%, #1e1e1e 100%);   
+	  -moz-border-image: -moz-linear-gradient(to right, #7f7f7f 50%, #1e1e1e 100%);
+	  -webkit-border-image: -webkit-linear-gradient(to right, #7f7f7f 50%, #1e1e1e 100%);
+    border-image-slice: 1;
+  }
+
+/* Create Project Button (Gold) */
+
+.btnGold, .btnGoldExp {
+	  border-image: linear-gradient(to right, #b58e12 50%, #1e1e1e 100%);   
+	  -moz-border-image: -moz-linear-gradient(to right, #b58e12 50%, #1e1e1e 100%);
+	  -webkit-border-image: -webkit-linear-gradient(to right, #b58e12 50%, #1e1e1e 100%);
+    border-image-slice: 1;
+}
+
+
+
+/*
+Footer Styling
+*/
+
+.footerContainer {
+  background: #1e1e1e; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient( #111, #000); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient( #111, #000); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient( #111, #000); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#111, #000); /* Standard syntax */
+  color: white;
+  height: 125px;
+  display:inline-block;
+}
+
+.footerContent{
+  margin-top: 20px;
+  text-align:right;
+  top: 70px;
+}
+
+/*
+//////////////////////////////////////////////////////
+                  Landing Page Styling
+//////////////////////////////////////////////////////
+*/
+
+
+/* 
+Hero Styling
+*/
+
+.appHeader {
+  background-image: url("./images/HeroBG.jpg");
+  background-size:cover;
+  /*background-position-y: -50px; */
+  /*background: radial-gradient(#1e1e1e, #111, #000);*/
+  height: 900px;
+  color: #1e1e1e;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.mainPageAppLogo {
+  margin-left:100px;
+}
+
+.topBar {
+  display: inline-flex;
+  margin-left:.5%;
+  margin-top:2.5%;
+}
+
+.topBarNav {
+  margin:30px;
+}
+
+.topBarNavRight { 
+  position:absolute;
+  top:2.5%;
+  margin:0;
+  right:10%;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 18px;
+}
+
+.heroTitleText {
+  display:inline-block;
+  color: #1e1e1e;
+}
+
+.heroTextContainer {
+  position:relative;
+  top: 20%;
+}
+
+.appIntro {
+  font-size: large;
+}
+
+.heroLandingButtons { 
+  position:relative;
+  top:25%;
+}
+
+#seeHowItWorks {
+  font-size: 1.2em;
+  right:20px;
+  top:5px;
+
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.btnLandingWhite {
+  margin-right:10px;
+  text-align:center;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #1e1e1e;
+  font-size: 15px;
+  background: rgba(255,255,255,.2);
+  padding: 15px 0px 15px 0px;
+  text-decoration: none;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  box-shadow: 1px 2px 5px #888888;
+  font-family: 'Droid Sans', sans-serif;
+  font-style:strong;
+}
+
+.btnLandingWhite:hover {
+  background: #b58e12;
+}
+
+
+.btnLandingBlack {
+  position: absolute;
+  top: 250px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #1e1e1e;
+  padding: 15px 0px 15px 0px;
+  text-decoration: none;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  box-shadow: 1px 2px 5px #888888;
+  font-family: 'Droid Sans', sans-serif;
+  font-style:strong;
+  text-align:center;
+
+}
+
+.btnLandingBlack:hover {
+  background: #b58e12;
+
+}
+
+/* Login Styling */
+
+.loginBoxContainer {
+  background: rgba(255,255,255,.2);
+  position:absolute;
+  height: 500px;
+  width:600px;
+  top:175px;
+  right: 250px;
+  padding-top:15px;
+  border-radius: 5px;
+  text-decoration: none;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  box-shadow: 1px 2px 5px #888888;
+}
+
+.loginTitle { 
+  font-size:23px;
+  margin-bottom:40px;
+}
+
+.formEdit:invalid {
+  background-color: #1e1e1e;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #888888;
+}
+
+.formEdit:valid {
+  background-color: #1e1e1e;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #b58e12;
+  color: #fff;
+}
+
+.form-control:focus {
+  border-bottom: 2px solid #b58e12;
+  box-shadow:none;
+  -webkit-box-shadow:none; 
+}
+
+.has-error .form-control:focus{
+  box-shadow:none;
+  -webkit-box-shadow: none; 
+}
+
+.createInputTitle {
+  font-size: 17px;
+}
+
+.createInputSubtitle {
+  font-size: 15px;
+}
+
+.loginBoxContainer h2 {
+  font-size: 17px;
+}
+
+.userNamePromptText, .passwordPromptText {
+  font-size: 22px;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.loginBoxFooterText {
+  top:75px;
+}
+
+.githubImage {
+  position:absolute;
+  bottom: 75px;
+  right: 70px;
+}
+
+.btnLogin {
+  top: 75px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #1e1e1e;
+  padding: 15px 0px 15px 0px;
+  text-decoration: none;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  box-shadow: 1px 2px 5px #888888;
+  font-family: 'Droid Sans', sans-serif;
+  font-style:strong;
+  text-align:center;
+
+}
+
+.btnLogin:hover {
+  background: #b58e12;
+
+}
+
+
+/*Logo Styling*/
+
+.appLogo {
+  /*animation: appLogo-spin infinite 20s linear;*/
+  height: 50px;
+}
+
+/*@keyframes appLogo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}*/
+
+
+/*
+Floating midBox Styling
+*/
+
+.midBox {
+  background-color: #1e1e1e;
+  box-shadow: 1px 2px 5px #888888;
+  border-radius: 3px;
+  min-height: 350px;
+  padding: 20px;
+  color: black;
+  top: 375px;
+  z-index:1;
+  overflow:hidden;
+  text-align:center;
+}
+
+.MBI { 
+  height:60px;
+}
+
+
+.midBoxSmallBox {
+  color: white;
+}
+
+.midBoxSmallBox p { 
+  font-size: 20px;
+  color: #7f7f7f
+}
+
+
+.midBoxTitle {
+  color: #b58e12;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+/*
+Section Two Styling
+*/
+
+.sectionTwoBox {
+  background-color: white;
+  height: 600px;
+  color: #1e1e1e;
+}
+
+.s2TopTextContainer { 
+  left: 23px;
+  top: 75px;
+}
+
+.s2BottomTextContainer { 
+  position:absolute;
+  top: 300px;
+  text-align:center;
+}
+
+
+.s2BottomBox {
+  text-align:center;
+  color: #7f7f7f
+}
+
+.s4BottomTextContainer h3 {
+  font-size: 1.2em;
+} 
+
+#midTitle {
+  color: #1e1e1e;
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-weight:700;
+}
+
+/*
+Section Three Styling
+*/
+.sectionThreeBox {
+  background-image: url("./images/LandingPage_Image.png");
+  background-size:     cover;              
+  background-repeat:   no-repeat;
+  background-position: center center;              
+  height: 400px;
+  color: white;
+}
+
+.s3TextContainer {
+  position:absolute;
+  bottom: 200px;
+  margin-top:30px;
+  max-width: 600px;
+}
+
+.s3TopText {
+  color: #b58e12;
+}
+
+.s3ButtonContainer { 
+  position:absolute;
+  bottom: 125px;
+  margin:20px;
+}
+
+/*
+Section Four Styling
+*/
+.sectionFourBox {
+  background-color:white;
+  height: 1000px;
+  color: #1e1e1e;
+}
+
+.s4TopTextTitle{ 
+  margin-bottom:40px;
+  margin-top:40px;  
+  font-size: 2em;
+  text-align:center;
+}
+
+.s4TextContainer {
+  position:absolute;
+  top:20px;
+}
+
+.s4TextContainer li {
+  margin-top:10px;
+}
+
+.s4BottomTextContainer {
+  position:absolute;
+  bottom: 200px;
+  text-align:center;
+  color: #7f7f7f
+}
+
+.s4BottomTextContainer h3 {
+  font-size: 14px;
+} 
+
+#bottomTitle {
+  color: #1e1e1e;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+
+.listText { 
+  color:#7f7f7f;
+  text-align:left;
+  font-size: 1.1em;
+}
+
+.listTitle {
+  color:#3d3d3d;
+  text-align:left;
+  font-size: 1.2em;
+}
+
+
+
+
+/* 
+//////////////////
+Small devices (tablets, 768px and up) 
+//////////////////
+*/
+
+
+
+/*
+//////////////////////////////////////////////////////
+                  Home Page Styling
+//////////////////////////////////////////////////////
+*/
+
+/*
+LogoSlide
+*/
+
+/*.logoWrapper {
+    position: relative;
+    overflow: hidden; 
+    width:500px;
+}*/
+
+/*#slide {
+    position: absolute;
+    left: -500px;
+    top: 15px;
+    width: auto;
+    height: 60%;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: .5s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 120px; }
+}*/
+
+/*
+Static Content
+*/
+
+.homePageContainer {
+  background: #1e1e1e; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(#1e1e1e, #111, #000); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#1e1e1e, #111, #000); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#1e1e1e, #111, #000); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#1e1e1e, #111, #000); /* Standard syntax */
+  width: 100%;
+  color: white;
+  /*height:900px;*/
+}
+
+.dashboardContainer {
+  margin:auto;
+}
+
+.tabContainer {
+  margin:auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.tabIssueBounties, .tabClaimBounties, .tabDashboard {
+  cursor:pointer;
+}
+
+.activityBarImg {
+  max-height:100%;
+}
+
+
+/* SVG Styling */
+
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #ffb300, 0 0 20px #ffb300, 0 0 30px #ffb300, 0 0 40px , 0 0 70px #b58e12, 0 0 80px #b58e12, 0 0 100px #b58e12, 0 0 150px #b58e12;
+  }
+}
+
+
+@-moz-keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #ffb300, 0 0 20px #ffb300, 0 0 30px #ffb300, 0 0 40px #b58e12, 0 0 70px #b58e12, 0 0 80px #b58e12, 0 0 100px #b58e12, 0 0 150px #b58e12;
+  }
+  to {
+    text-shadow: 0 0 5px #ffb300, 0 0 10px #ffb300, 0 0 15px #ffb300, 0 0 20px #b58e12, 0 0 35px #b58e12, 0 0 40px #b58e12, 0 0 50px #b58e12, 0 0 75px #b58e12;
+  }
+}
+
+@keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #ffb300, 0 0 20px #ffb300, 0 0 30px #ffb300, 0 0 40px #b58e12, 0 0 70px #b58e12, 0 0 80px #b58e12, 0 0 100px #b58e12, 0 0 150px #b58e12;
+  }
+  to {
+    text-shadow: 0 0 5px #ffb300, 0 0 10px #ffb300, 0 0 15px #ffb300, 0 0 20px #b58e12, 0 0 35px #b58e12, 0 0 40px #b58e12, 0 0 50px #b58e12, 0 0 75px #b58e12;
+  }
+}
+
+.faded { 
+  opacity: 0.4; 
+}
+
+
+#glowDotIssue {
+  position:absolute; 
+  bottom:13px;
+  /*right: 80px;*/
+  font-size:40px;
+  -webkit-animation: neon4 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon4 1.5s ease-in-out infinite alternate;
+  animation: neon4 1.5s ease-in-out infinite alternate;
+}
+
+#glowDotClaim {
+  position:absolute; 
+  bottom:13px;
+  /*right: 80px;*/
+  font-size:40px;
+  -webkit-animation: neon4 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon4 1.5s ease-in-out infinite alternate;
+  animation: neon4 1.5s ease-in-out infinite alternate;
+}
+
+.techSVG {
+  position:relative;
+}
+
+/*
+//////////////////////////////////////////////////////
+                  Claim Page Styling
+//////////////////////////////////////////////////////
+*/
+
+/*
+LogoSlide
+*/
+
+/*.logoWrapper {
+    position: relative;
+    overflow: hidden; 
+    width:500px;
+}*/
+
+/*#slide {
+    position: absolute;
+    left: -500px;
+    top: 15px;
+    width: auto;
+    height: 60%;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: .5s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 120px; }
+}*/
+
+/*
+Static Content
+*/
+
+.claimPageContainer {
+  background: #1e1e1e; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(#1e1e1e, #111, #000); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#1e1e1e, #111, #000); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#1e1e1e, #111, #000); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#1e1e1e, #111, #000); /* Standard syntax */
+  width: 100%;
+  color: white;
+  /*height:900px;*/
+}
+
+.claimRepoUserName {
+  font-size: 12px;
+  opacity:0.5;
+}
+
+
+
+/*
+//////////////////////////////////////////////////////
+                  User Graph Styling
+//////////////////////////////////////////////////////
+*/
+
+.userGraphContainer { 
+  height:300px;
+  margin-bottom:15px;
+  padding-left:0;
+  padding-right:0;
+  background: #1e1e1e;
+  border-radius:2px;
+}
+
+.userGraphTitle {
+  position:absolute;
+  padding-left:15px;
+  margin-top:20px;
+  font-size: 18px;
+}
+
+.userBalanceTitle {
+  display:block;
+  position:absolute;
+  text-align:left;
+  right: 20px;
+  top:20px;
+}
+
+.userBalanceBox {
+  margin-top:-10px;
+}
+
+.balanceBox { 
+  text-align: center;
+}
+
+/*
+//////////////////////////////////////////////////////
+                  User Activity Styling
+//////////////////////////////////////////////////////
+*/
+
+
+.feedContainer { 
+  height:100%;
+  bottom:0;
+  background: #1e1e1e;
+  border-radius:2px;
+  overflow:hidden;
+}
+
+.githubFeed {
+  height:300px;
+}
+
+.feedStream {
+  margin-top: 5px;
+}
+
+.feedTitle {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.activityBarImg {
+  position:absolute;
+  height: 95%;
+  width: auto;
+  bottom:0;
+}
+
+.activityTitle {
+  font-size: 15px;
+  margin-top:10px;
+  margin-bottom:5px;
+}
+
+.activityTime {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom:5px;
+}
+
+.activityText {
+  color: #b58e12;
+  font-size: 12px;
+} 
+
+
+.activityBox {
+  height:90px;
+  overflow:hidden;
+}
+
+.secondaryBox {
+  opacity:0.6;
+}
+
+
+
+/*
+//////////////////////////////////////////////////////
+                  Issue Card Styling
+//////////////////////////////////////////////////////
+*/
+
+.cardContainer {
+  margin-bottom: 15px;
+  /*height:130px;*/
+  background: #1e1e1e;
+  border-radius:2px;
+  min-height: 100px;
+  overflow:hidden;
+}
+
+.cardContentContainer { 
+  /*position:absolute;*/
+  margin-top:15px;
+  margin-bottom:10px;
+  /*margin-bottom:15px;*/
+}
+
+.repoName {
+  font-size: 17px;
+}
+
+.repoTech {
+  font-size: 15px;
+  /*margin-left: -20px;*/
+}
+
+.repoDisc { 
+  color: #b58e12;
+  font-size: 15px
+}
+
+@media (max-width: 1250px){
+    /*.cardContainer{
+      height:160px;
+    }*/
+}
+
+@media (max-width: 1000px){
+
+    .heroTextContainer {
+      top:150px;
+    }
+    .heroLandingButtons{
+      top:200px;
+    }
+    .midBox, .appHeader, {
+      text-align:center;
+    }
+    .sectionTwoBox{
+      height: 1050px;
+    }
+    .s2TopTextContainer {
+      top: 75px;
+      text-align:center;
+    }
+    .s3ButtonContainer {
+      margin-top: 20px;
+    }
+    .s4TextContainer {
+      text-align:center;
+    }
+    .sectionFourBox{
+      height: 800px;
+    }
+    .s4BottomTextContainer{
+      bottom: 100px;
+    }
+    .mainPageAppLogo { 
+      margin-left: 20px;
+    }
+    .s2BottomBox{
+      display:none;
+    }
+    .sectionTwoBox{
+      display:none;
+    }
+    .sectionThreeBox{
+      top:50px;
+    }
+    .midBox{
+      top:275px;
+      height:650px;
+    }
+}
+
+@media (max-width:770px) {
+    .manageProjectListContents{
+      margin-left:-15px;
+      text-align: center;
+    }
+    .repoLastUpdate {
+      display:none;
+    }
+    .timeSentBox {
+      display:none;
+    }
+    .userRedeemTitle {
+      display:none;
+    }
+    .amountRedeemTitle{
+      display:none;
+    }
+    .s3ButtonContainer {
+      margin-top: 20px;
+    }
+    .midBox{
+      top:275px;
+      height:650px;
+    }
+    .heroTextContainer {
+      top:100px;
+    }
+    .heroLandingButtons{
+      top:150px;
+    }
+    .mainPageAppLogo { 
+      margin-left: 20px;
+    }
+    .s2BottomBox{
+      display:none;
+    }
+    .sectionTwoBox{
+      display:none;
+    }
+    .sectionThreeBox{
+      top:50px;
+    }
+}
+
+@media (max-width:568px) {
+
+    .userBalanceTitle {
+      display:none;
+    }
+    .feedStream, .githubFeed, .activityBox, .activityTitle {
+      padding-right:0px;
+    }
+    .activityText {
+      display:none; 
+    }
+    .heroLandingButtons{
+      position:absolute;
+      top: 550px;
+    }
+    .appLogo{
+      margin: 0;
+    }
+    .heroTextContainer{
+      top:10%;
+    }
+    .midBox {
+      top:250px;
+      height: 800px;
+    }
+    .s2BottomBox{
+      top:350px;
+    }
+    .sectionThreeBox{
+      bottom:30px;
+    }
+    .s3TextContainer {
+      text-align:center;
+    }
+    .s4BottomTextContainer {
+      display:none;
+    }
+    .s4TextContainer {
+      top:250px;
+    }
+    .sectionThreeBox{
+      display:none;
+    }
+    .sectionFourBox{
+      height:900px;
+    }
+}
+
+
+/*
+//////////////////////////////////////////////////////
+                  Claim Card Styling
+//////////////////////////////////////////////////////
+*/
+
+
+/*.cardContainer { 
+  height:300px;
+  background: #1e1e1e;
+}*/
+
+/*
+//////////////////////////////////////////////////////
+                  Open Card Styling
+//////////////////////////////////////////////////////
+*/
+
+
+/*.cardContainer  { 
+  height:300px;
+  background: #1e1e1e;
+}*/
+
+/*
+//////////////////////////////////////////////////////
+                  Background Styling - Redeem, SeeProject, Manage, Create
+//////////////////////////////////////////////////////
+*/
+
+.createPageContainer, .seeProjectPageContainer, .redeemPageContainer, .managePageContainer {
+  background: #1e1e1e; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(#1e1e1e, #111, #000); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#1e1e1e, #111, #000); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#1e1e1e, #111, #000); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#1e1e1e, #111, #000); /* Standard syntax */
+  width: 100%;
+  min-height: 900px;
+  color: white;
+} 
+
+
+/*
+//////////////////////////////////////////////////////
+                  CreatePage Styles
+//////////////////////////////////////////////////////
+*/
+
+.selectedStage {
+    border-radius: 35%;
+    padding: 5px;
+    background: #1e1e1e;
+    border: 1px solid #b58e12;
+    color: #b58e12;
+    text-align: center;
+    font-family: 'Droid Sans', sans-serif;
+    
+}
+
+.stageContainer {
+  height: 50px; 
+  background: #1e1e1e;
+  border-radius: 2px;
+}
+
+.stageTextContainer { 
+  text-align:center;
+  margin-top:15px;
+  margin-bottom:15px;
+}
+
+.createInputBox { 
+  height: 700px;
+  top: 30px;
+  background: #1e1e1e;
+  border-radius: 2px;
+}
+
+.createInputForm {
+  top:15%;
+}
+
+.createTokenBtn {
+  top: 40px;
+}
+
+/* Create Page 2 */
+
+.createContinue {
+  top:15%; 
+}
+
+.createContinueBtn h5{
+  padding: 0;
+}
+
+.createContinueBtn {
+  top:80px;
+}
+
+.ethAddressBox { 
+  background-color: #2f2f2f;
+  color: #b58e12;
+  margin-top:10px;
+  margin-bottom:10px;
+  padding:0;
+  height:30px;
+  overflow:hidden;
+  border-radius:2px;
+}
+
+.ethBalanceBox { 
+  background-color: #2f2f2f;
+  color: #b58e12;
+  margin-top:5px;
+  margin-bottom:5px;
+  border-radius:2px;
+
+}
+
+.tokenBalanceBox { 
+  background-color: #2f2f2f;
+  color: #b58e12;
+  margin-top:5px;
+  margin-bottom:5px;
+  border-radius:2px;
+}
+
+.ethAddressText {
+  margin-top:5px;
+  border-radius:2px;
+}
+
+
+.obtLogo, .ethLogo {
+  height:20px;
+  width:auto;
+}
+
+
+/*
+//////////////////////////////////////////////////////
+                  ManagePage Styles
+//////////////////////////////////////////////////////
+*/
+
+.manageProjectMain { 
+  min-height:550px; 
+  background-color: #1e1e1e;
+  overflow:hidden;
+  border-radius:2px;
+  margin-bottom:20px;
+}
+
+.redeemRequestContainer { 
+  min-height:550px; 
+  background-color: #1e1e1e;
+  overflow:hidden;
+  border-radius:2px;
+}
+
+.manageProjectMainContents { 
+  top:25px;
+  left:20px;
+}
+
+.manageProjectListContents { 
+  top:25px;
+  left:20px;
+}
+
+.cardRequestContainer { 
+  top:40px;
+}
+
+.dividerLine {
+  background-color: #111;
+  opacity: 0.5;
+  height: 2px;
+  margin-top:15px;
+  margin-bottom:15px;
+}
+
+.requestCardContainer {
+  color: #888888;
+}
+
+.equalSeparator { 
+  color: #b58e12;
+}
+
+.userNameBox { 
+  color: #fff;
+  font-size: 15px;
+  margin-bottom:5px;
+  overflow:hidden;
+}
+
+.userRedeemTitle, .amountRedeemTitle { 
+  font-size: 20px;
+}
+
+
+
+.manageEthAddressBox { 
+  background-color: #2f2f2f;
+  color: #fff;
+  margin-top:10px;
+  margin-bottom:10px;
+  height:30px;
+  overflow:hidden;
+  border-radius:2px;
+  text-align: center;
+}
+
+.manageProjectTitle { 
+  font-size: 18px;
+}
+
+.manageProjectName { 
+  color: #b58e12;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.manageSubtitle { 
+  font-size: 15px;
+  margin-top: 25px;
+}
+
+.manageEthBalanceBox { 
+  background-color: #2f2f2f;
+  color: #fff;
+  margin-top:5px;
+  margin-bottom:5px;
+  border-radius:2px;
+
+}
+
+.manageTokenBalanceBox { 
+  background-color: #2f2f2f;
+  color: #fff;
+  margin-top:5px;
+  margin-bottom:5px;
+  border-radius:2px;
+}
