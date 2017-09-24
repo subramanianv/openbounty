@@ -1,0 +1,57 @@
+{
+  "contract_name": "JobRegistration",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getJobTracker",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "name": "_jt",
+          "type": "address"
+        }
+      ],
+      "name": "addJobTracker",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b6101558061001f6000396000f300606060405263ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630c90b2a681146100485780639b56180314610087575b600080fd5b341561005357600080fd5b61005e6004356100b8565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b341561009257600080fd5b6100b660043573ffffffffffffffffffffffffffffffffffffffff602435166100e3565b005b60008181526020819052604090205473ffffffffffffffffffffffffffffffffffffffff165b919050565b6000828152602081905260409020805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff83161790555b50505600a165627a7a72305820dbfa89aa524a77df27ec504140bde06349b0eb9136a2ffadc885e7cbe3e35ddc0029",
+  "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0xfd126e652100d35a029e1358b5be3e0fc6bb7348",
+      "updated_at": 1506191800338
+    },
+    "15": {
+      "events": {},
+      "links": {},
+      "address": "0x6634dd1332e1e17cf9af3d3d2653ebc51017bd9b",
+      "updated_at": 1505971062433
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1506191800338
+}

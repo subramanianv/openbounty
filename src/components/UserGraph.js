@@ -10,103 +10,27 @@ const dummyBalance = {
 
 class UserGraph extends Component {
 
-  componentDidMount(){ 
-    const ctx = this.refs.chart.getContext('2d');
+  componentDidMount() {
 
-    var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-    gradientStroke.addColorStop(1, "#ffde55");
-    gradientStroke.addColorStop(0, "#b58e12");
-
-    const data = {
-      labels: this.props.graphData.labels,
-      datasets: [
-        {
-          pointRadius: 0,
-          borderColor:               gradientStroke,
-          pointBorderColor:          gradientStroke,
-          pointBackgroundColor:      gradientStroke,
-          pointHoverBackgroundColor: gradientStroke,
-          pointHoverBorderColor:     gradientStroke,
-          data: this.props.graphData.datasets[0].data,
-        },
-      ],
-    };
-
-
-    const options = {
-      fill:true, 
-      legend:{
-        display:false,
-      },
-      maintainAspectRatio:false,
-      responsive:true,
-      tooltipFillColor: "rgba(0,0,0,0.8)",
-      tooltipFontStyle: "bold",
-      datasetStrokeWidth: 3,
-           
-      tooltips: {
-        mode: 'x-axis',
-        intersect: false,
-      },
-
-      hover: {
-        mode: 'nearest',
-        intersect: true
-      },
-
-      scales: {
-        yAxes: [{
-            ticks: {
-                fontColor: "rgba(0,0,0,0.0)",
-                fontStyle: "bold",
-                beginAtZero: true,
-                maxTicksLimit: 1,
-            },
-            gridLines: {
-                drawTicks: false,
-                display: false
-            }
-          }],
-        xAxes: [{ 
-          gridLines: {
-            zeroLineColor: "transparent",
-          }
-        }]
-      },
-      
-      showScale:false,
-      pointDot:false,
-      datasetStroke:false, 
-      animation: {
-      easing: "easeInOutSine"
-      },
-    };
-
-    new Chart(ctx, { type: 'line', data: data, options: options});
   }
-  
+
   render(){
     return (
-      <div className='userGraphContainer col-xs-12 container'> 
-
-          <div className="userGraphTitle">
-          Overview
-          </div>
-          <div className="userBalanceTitle">
-          <h4> Balance </h4> 
-            <div className="userBalanceBox">
-              <h2> {dummyBalance.acctBalance} ETH </h2>
-            </div>
-          </div> 
-        
-          <div className="chartBox">
-          <canvas className="chart" height="290" ref="chart" /> 
+      <div className='userGraphContainer col-xs-12 container' style={{paddingLeft:20, paddingTop:20}}>
+          <h4>
+              {
+                (this.props.userAddress == null) ? "New ? You haven't set the token address" : "Your token payout address is " + this.props.userAddress
+              }
+          </h4>
+          <br/>
+          <div className="btnGold" onClick={this.props.setUserPayoutAddress}>
+              <h5>Set Address</h5>
           </div>
 
       </div>
+
     );
   }
 }
 
 export default UserGraph;
-

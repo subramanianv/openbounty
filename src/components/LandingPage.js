@@ -21,6 +21,11 @@ import Icon3 from '../images/LandingPage_Icon3.svg';
 
 
 class LandingPage extends Component {
+
+  redirectToGithub() {
+    window.location.href = "https://github.com/login/oauth/authorize?client_id=79a74ecd4f74e041ef36&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauthorize&state=1001&scope=user%20user%3Aemail%20user%3Afollow%20public_repo%20repo%20read%3Arepo_hook%20write%3Arepo_hook%20admin%3Arepo_hook";
+  }
+
   render() {
 
     // Disabled Login Box
@@ -36,24 +41,24 @@ class LandingPage extends Component {
 
     return (
 
-      <div className='landingPageContainer'> 
+      <div className='landingPageContainer'>
 
         <div className="appHeader">
 
-            <div className="topBar col-xs-12 col-xs-offset-1"> 
+            <div className="topBar col-xs-12 col-xs-offset-1">
               <img src={Logo_Black} className="appLogo mainPageAppLogo" alt="logo "/>
-              <h3 onClick={()=>{alert("Placeholder")}} className=" btn topBarNavRight hidden-xs hidden-sm noPadd"> LOGIN / SIGNUP </h3>
+              <h3 onClick={this.redirectToGithub} className=" btn topBarNavRight hidden-xs hidden-sm noPadd"> LOGIN WITH GITHUB </h3>
             </div>
 
             <div className="heroTextContainer col-xs-10 col-xs-offset-1 col-md-4 noPadd">
-              <h1 className="heroTitleText"> Welcome to OpenBounty </h1> 
-              <h3 className="heroText"> 
+              <h1 className="heroTitleText"> Welcome to OpenBounty </h1>
+              <h3 className="heroText">
                 Open Bounty is a blockchain development platform
                 designed to help developers get rewarded for their
                 contributions and for project owners to get quality
                 code, quickly and reliably.
-              </h3> 
-            </div> 
+              </h3>
+            </div>
 
             <div className="heroLandingButtons col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 noPadd">
               <div className="btnLandingWhite col-xs-12 col-sm-2" type="button" onClick={()=>{this.props.pageChange('HOME')}}>GET STARTED</div>
@@ -66,34 +71,34 @@ class LandingPage extends Component {
 
             <div className="col-xs-12 col-lg-10 col-lg-offset-1 midBox">
 
-                <div className="s2TopTextContainer col-xs-12 row noPadd"> 
+                <div className="s2TopTextContainer col-xs-12 row noPadd">
                     <div className="midBoxSmallBox col-xs-12 col-md-4 noPadd " >
-                      <img src={Icon1} className="midBoxIcon1 MBI" alt="Icon" /> 
+                      <img src={Icon1} className="midBoxIcon1 MBI" alt="Icon" />
                       <h1 className="midBoxTitle" >Get Bounty Tokens</h1>
-                      <p> 
+                      <p>
                         Et case aliquip accusata eam, ad
                         eam oratio verear consequuntur.
                       </p>
                     </div>
 
                     <div className="midBoxSmallBox col-xs-12 col-md-4 noPadd">
-                      <img src={Icon2} className="midBoxIcon2 MBI" alt="Icon" /> 
+                      <img src={Icon2} className="midBoxIcon2 MBI" alt="Icon" />
                       <h1 className="midBoxTitle">Contribute with Code</h1>
-                      <p> 
+                      <p>
                         Et case aliquip accusata eam, ad
                         eam oratio verear consequuntur.
                       </p>
                     </div>
 
                     <div className="midBoxSmallBox col-xs-12 col-md-4 noPadd ">
-                      <img src={Icon3} className="midBoxIcon3 MBI" alt="Icon" /> 
+                      <img src={Icon3} className="midBoxIcon3 MBI" alt="Icon" />
                       <h1 className="midBoxTitle" >Manage Projects</h1>
-                      <p> 
+                      <p>
                         Et case aliquip accusata eam, ad
                         eam oratio verear consequuntur.
                       </p>
                     </div>
-                      
+
               </div>
 
             </div>
@@ -102,11 +107,11 @@ class LandingPage extends Component {
 
 
         <div className="sectionTwoBox col-sm-12">
-         
-        <div className="noPadd s2BottomTextContainer col-xs-11 col-sm-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">   
+
+        <div className="noPadd s2BottomTextContainer col-xs-11 col-sm-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
           <div className="noPadd s2BottomBox col-xs-12 col-md-offset-1 col-md-10">
               <h1 className="s2BottomBoxTitle" id="midTitle">Erat munere gloriatur et nam</h1>
-              <p> 
+              <p>
                 Cu eam disputationi delicatissimi. Has ex quodsi iudicabit. Et case
                 aliquip accusata eam, ad eam oratio verear consequuntur. Sale
                 scaevola cu vim. Eum ipsum etiam eu, erat munere gloriatur et nam,
@@ -117,7 +122,7 @@ class LandingPage extends Component {
             </div>
           </div>
 
-        </div> 
+        </div>
 
         <div className="sectionThreeBox col-sm-12">
         </div>
@@ -130,33 +135,33 @@ class LandingPage extends Component {
 
                 <ol>
 
-                  <li> 
+                  <li>
                   <h3 className="listTitle" > First do this </h3>
-                  <p className="listText" > 
+                  <p className="listText" >
                     Et case aliquip accusata eam, ad eam oratio verear
                     consequuntur. Sale scaevola cu vim.
-                  </p> 
+                  </p>
                   </li>
-                  <li> 
+                  <li>
                   <h3 className="listTitle" > Then do that </h3>
-                  <p className="listText" > 
+                  <p className="listText" >
                     Et case aliquip accusata eam, ad eam oratio verear
                     consequuntur. Sale scaevola cu vim.
-                  </p> 
+                  </p>
                   </li>
-                  <li> 
+                  <li>
                   <h3 className="listTitle" > Then do that </h3>
-                  <p className="listText" > 
+                  <p className="listText" >
                     Et case aliquip accusata eam, ad eam oratio verear
                     consequuntur. Sale scaevola cu vim.
-                  </p> 
+                  </p>
                   </li>
-                  <li> 
+                  <li>
                   <h3 className="listTitle" > And finally do this </h3>
-                  <p className="listText" > 
+                  <p className="listText" >
                     Et case aliquip accusata eam, ad eam oratio verear
                     consequuntur. Sale scaevola cu vim.
-                  </p> 
+                  </p>
                   </li>
 
                 </ol>
@@ -169,19 +174,19 @@ class LandingPage extends Component {
 
               <div className="row col-xs-12">
                 <div className="btnLandingBlack col-xs-4 col-xs-offset-4 " onClick={()=>{this.props.pageChange('HOME'); jump('.topBar');}} > GET STARTED
-                </div> 
-              </div> 
+                </div>
+              </div>
 
               <h2 className="s4BottomTextTitle" id="bottomTitle"> Erat munere gloriatur et nam </h2>
-              <h3 className="s4BottomText col-md-8 col-md-offset-2"> 
+              <h3 className="s4BottomText col-md-8 col-md-offset-2">
                 Cu eam disputationi delicatissimi. Has ex quodsi iudicabit. Et case
                 aliquip accusata eam, ad eam oratio verear consequuntur. Sale
                 scaevola cu vim. Eum ipsum etiam eu, erat munere gloriatur et nam,
                 probo quando et eos. Dicunt perpetua nec et, detraxit quaestio
                 reformidans ei sit. Sit viris appetere molestiae ut.
-              </h3> 
-            
-            </div> 
+              </h3>
+
+            </div>
 
 
 
@@ -200,4 +205,3 @@ class LandingPage extends Component {
 
 
 export default LandingPage;
-

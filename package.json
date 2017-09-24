@@ -3,21 +3,40 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "async": "^2.5.0",
+    "body-parser": "^1.17.2",
     "chart.js": "^2.6.0",
     "chartjs": "^0.3.24",
+    "cookie-parser": "1.4.3",
+    "ethereumjs-testrpc": "4.1.1",
+    "ethereumjs-util": "^5.1.2",
+    "express": "^4.15.4",
+    "jsonp": "^0.2.1",
     "jump.js": "^1.0.2",
+    "mysql": "^2.14.1",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.2",
     "react-chartjs-2": "^2.6.1",
+    "react-cookies": "^0.1.0",
     "react-dd-menu": "^2.0.2",
     "react-dom": "^15.6.1",
     "react-github-activity": "^1.0.2",
-    "react-scripts": "1.0.10"
+    "react-scripts": "^1.0.10",
+    "react-web3": "^0.4.2",
+    "redis": "2.8.0",
+    "request": "^2.81.0",
+    "truffle-contract": "^2.0.5",
+    "truffle-hdwallet-provider": "0.0.3",
+    "underscore": "1.8.3",
+    "web3": "^1.0.0-beta.18",
+    "xhr": "2.4.0",
+    "xmlhttprequest": "^1.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "testrpc": "testrpc -i 15 --account=\"0x76d9a93f08df13984ff9b16d91bb83318ebfb1a84c67cfd76ff88d0e928c7e3f,6000000000000000000000000\" --account=\"0x8da99617c8516da84d0546726fa245b7d70e74eae22cea30697de9f56f8c13a6,6000000000000000000000000\""
   }
 }

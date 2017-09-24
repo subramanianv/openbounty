@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 
-// Called in each IssueCard component and displayed in the dashboard area. (HOME page) 
+// Called in each IssueCard component and displayed in the dashboard area. (HOME page)
 
-class BtnIssueCard extends Component {  
-  render(){ 
-    if (this.props.githubInfo1.repoActiveStatus === true){ 
+class BtnIssueCard extends Component {
+  render(){
+    console.log(this.props.githubInfo1.projectHasToken)
+    if (this.props.githubInfo1.projectHasToken === false){
       return(
-        <div className="btnGold" onClick={()=> this.props.pageChange('CREATE')}>
+        <div className="btnGold" onClick={()=> this.props.createTokenBtnHandler(this.props.githubInfo1)}>
         <h5> CREATE TOKEN </h5>
         </div>
       )
     }
-    else { 
+    else {
       return(
-        <div className="btnSilver" onClick={()=> this.props.pageChange('MANAGE')}>
+        <div className="btnSilver" onClick={()=> this.props.manageRepo(this.props.githubInfo1)}>
         <h5> GO TO PROJECT</h5>
         </div>
       )
@@ -29,7 +30,7 @@ export default BtnIssueCard;
 
 
               // <div className="repoUserNameContainer col-xs-12">
-              //   <p className="repoUserName"> 
+              //   <p className="repoUserName">
               //   ({this.props.githubInfo.repoUserName})
               //   </p>
-              // </div> 
+              // </div>

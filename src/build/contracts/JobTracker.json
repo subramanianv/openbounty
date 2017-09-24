@@ -1,0 +1,178 @@
+{
+  "contract_name": "JobTracker",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "pullRequests",
+      "outputs": [
+        {
+          "name": "pullRequestID",
+          "type": "uint256"
+        },
+        {
+          "name": "bountyTokens",
+          "type": "uint256"
+        },
+        {
+          "name": "bountyState",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "bountyCreator",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "pullRequestID",
+          "type": "uint256"
+        },
+        {
+          "name": "bountyHunter",
+          "type": "address"
+        }
+      ],
+      "name": "acceptWork",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_pullRequestID",
+          "type": "uint256"
+        },
+        {
+          "name": "bountyTokens",
+          "type": "uint256"
+        }
+      ],
+      "name": "createBounty",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isBountyCreator",
+      "outputs": [
+        {
+          "name": "isTrue",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "repoId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "pullRequestID",
+          "type": "uint256"
+        },
+        {
+          "name": "newTokens",
+          "type": "uint256"
+        }
+      ],
+      "name": "increaseBounty",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "pullRequestID",
+          "type": "uint256"
+        }
+      ],
+      "name": "unlockBounty",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "pullRequestID",
+          "type": "uint256"
+        }
+      ],
+      "name": "lockBounty",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_tokenContract",
+          "type": "address"
+        },
+        {
+          "name": "_repoID",
+          "type": "uint256"
+        }
+      ],
+      "payable": true,
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x606060405260405160408061048a83398101604052808051919060200180519150505b60008054600160a060020a03338116600160a060020a031992831617909255600183905560028054928516928216831790556003805490911690911790555b50505b610417806100736000396000f300606060405236156100a15763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166348e29faf81146100a65780634e003a77146100ee57806358674b0e1461011d5780637925d420146101415780637eb80a091461015c57806391fc17b414610183578063921f1c6b146101a85780639d76ea58146101c3578063b3d3a0d2146101f2578063fa4dbd031461020a575b600080fd5b34156100b157600080fd5b6100bc600435610222565b604051808481526020018381526020018260028111156100d857fe5b60ff168152602001935050505060405180910390f35b34156100f957600080fd5b610101610246565b604051600160a060020a03909116815260200160405180910390f35b341561012857600080fd5b61013f600435600160a060020a0360243516610255565b005b341561014c57600080fd5b61013f600435602435610333565b005b341561016757600080fd5b61016f61034c565b604051901515815260200160405180910390f35b341561018e57600080fd5b61019661036b565b60405190815260200160405180910390f35b34156101b357600080fd5b61013f600435602435610371565b005b34156101ce57600080fd5b61010161038d565b604051600160a060020a03909116815260200160405180910390f35b34156101fd57600080fd5b61013f60043561039c565b005b341561021557600080fd5b61013f6004356103c3565b005b60046020526000908152604090208054600182015460029092015490919060ff1683565b600054600160a060020a031681565b600082815260046020526040808220600101546002549092600160a060020a039091169163a9059cbb91859185919051602001526040517c010000000000000000000000000000000000000000000000000000000063ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b15156102e557600080fd5b6102c65a03f115156102f657600080fd5b50505060405180519050151561030b57600080fd5b60008381526004602052604090206002908101805460ff19166001835b02179055505b505050565b60008281526004602052604090206001018190555b5050565b6000805433600160a060020a03908116911614610367575060005b5b90565b60015481565b60008281526004602052604090206001018054820190555b5050565b600354600160a060020a031681565b600081815260046020526040902060020180546001919060ff191682805b02179055505b50565b6000818152600460205260408120600201805460ff19166001836103ba565b02179055505b505600a165627a7a7230582043c06e5f213215c1b5b93fbd7c6bcefd03b6d8beb6cc27f8901688f0160335c50029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1506191615149
+}

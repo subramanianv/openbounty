@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
 import BtnIssueCard from './BtnIssueCard';
-
+import _ from 'underscore'
 
 // Each card in the "IssueBounty" tab is an IssueCard. This component takes the mapped information from GitHub and spits it out in the correct format.
 
-class IssueCard extends Component {
+class PullRequestCard extends Component {
+
   render() {
+    let PR_STATE = {
+      1 : "OPEN",
+      2: "CLOSED",
+      3 : "MERGED",
+      4 : "AWAITING_ADDRESS",
+      5 : "FULFILLED"
+    }
+    let BTN_MESSAGES = {
+      1 : "SET BOUNTY",
+      3 : "ACCEPT AND SEND BOUNTY"
+    }
     console.log("Rendering");
     // Set Default Color as White (in case no Tech Match)
     let foundTechColor = "#FFF"
@@ -14,7 +26,7 @@ class IssueCard extends Component {
     let data = require('../colors.json');
 
     // removes the space at the end of the incoming data to properly work with the FindTechColor function below.
-    let repoTech = this.props.githubInfo1.repoTech[0].replace(/\s/g,'');
+    let repoTech = "javascript"
 
 
     // Find Color in colors.json that matches incoming github data from Props. Take the corresponding color - set to a variable, and put it into the SVG in the render.
@@ -36,7 +48,6 @@ class IssueCard extends Component {
     }
 
     findTechColor();
-
     return (
 
         <div className="cardContainer col-xs-12">
@@ -46,38 +57,32 @@ class IssueCard extends Component {
 
               <div className="repoNameContainer col-xs-12">
                 <p className="repoName">
-                {this.props.githubInfo1.repoName}
+                {this.props.PR.title}
                 </p>
               </div>
-              <div className="repoDiscContainer col-xs-12">
-                <p className="repoDisc">
-                {this.props.githubInfo1.repoDisc}
+              <div className="repoNameContainer col-xs-12">
+                <p className="repoName">
+                Bounty : {this.props.PR.numTokens + " " + this.props.repo.tokenSymbol}
                 </p>
               </div>
-              <div className="repoTechContainer col-xs-12 col-md-6 row">
-                <div className="techSVGContainer col-xs-1">
-                  <svg className="techSVG" height="10" width="10">
-                    <circle cx="5" cy="5" r="5"  strokeWidth="1" fill={foundTechColor} />
-                  </svg>
-                </div>
-                <div className="repoTechTextContainer col-xs-9">
-                  <p className="repoTech">
-                  {this.props.githubInfo1.repoTech[0]}
-                  </p>
-                </div>
+              <div className="repoNameContainer col-xs-12">
+                <p className="repoName">
+                {"Contributed by " + this.props.PR.username}
+                </p>
               </div>
+              { this.props.PR.state!=PR_STATE.OPEN && this.props.PR.address == null ? <span>Waiting for contributer to signup</span>:
+                (<div  onClick = {_.partial(this.props.onButtonClick, BTN_MESSAGES[this.props.PR.state], this.props.PR, this.props.repo)} className="btnGoldExp col-xs-7">
+                  <span>{BTN_MESSAGES[this.props.PR.state]}</span>
+               </div>)
+              }
+
 
             </div>
 
             <div className="rightSide col-xs-12 col-sm-4 noPadd">
-
-              <div className="repoLastUpdateContainer col-xs-12">
-              </div>
-
-              <div className="issueCardButtonContainer col-xs-12">
-                <BtnIssueCard  createTokenBtnHandler = {this.props.createTokenBtnHandler} manageRepo = {this.props.manageRepo} pageChange={(x)=> this.props.pageChange(x)} githubInfo1={this.props.githubInfo1} className="issueCardButton"/>
-              </div>
-
+              <p style={{color : "#b58e12"}} className="repoName"><b>{
+                PR_STATE[this.props.PR.state]
+              }</b></p>
             </div>
 
         </div>
@@ -87,7 +92,7 @@ class IssueCard extends Component {
   }
 }
 
-export default IssueCard;
+export default PullRequestCard;
 
 // for Maping incoming data to repos (takes array called IssueBountiesRepos)
 // {this.state.IssueBountiesRepos.map((Element,i) => <IssueBountiesCard key={i} Repos={Element}/>)}
