@@ -87,7 +87,11 @@ app.post('/events/:repoID', jsonParser, function(request, response) {
 				title : body.pull_request.title
 			}
 			sql.query("insert into pull_request SET ?", data, console.log);
-			sql.query("insert ignore into users(user_id, username) values(?,?)",[body.pull_request.head.user.id, body.pull_request.head.user.login],console.log)
+			sql.query("select 1 from users where username=?", [body.pull_request.head.user.login], function(err, rows) {
+				if (rows && rows[0] != 1) {
+					sql.query("insert into users(username, user_id) values(?,?)", [body.pull_request.head.user.login, body.pull_request.head.user.login], console.log)
+				}
+			})
 			console.log(body.pull_request.id, body.pull_request.title, body.pull_request.head.user.login);
 			break;
 		case "closed":

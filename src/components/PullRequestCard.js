@@ -70,7 +70,7 @@ class PullRequestCard extends Component {
                 {"Contributed by " + this.props.PR.username}
                 </p>
               </div>
-              { this.props.PR.state!=PR_STATE.OPEN && this.props.PR.address == null ? <span>Waiting for contributer to signup</span>:
+              { this.props.PR.state!=1 && this.props.PR.address == null ? <span>Waiting for contributer to signup</span>:
                 (<div  onClick = {_.partial(this.props.onButtonClick, BTN_MESSAGES[this.props.PR.state], this.props.PR, this.props.repo)} className="btnGoldExp col-xs-7">
                   <span>{BTN_MESSAGES[this.props.PR.state]}</span>
                </div>)
