@@ -231,8 +231,14 @@ class App extends Component {
               uri : 'http://ec2-34-227-238-42.compute-1.amazonaws.com:8000/userAddress?login=' + self.state.login,
               method : 'GET'
             }, function(error, r) {
-                var r =  JSON.parse(r.body);
-                callback(null, r);
+               if(error || !r || !r.body) {
+                 callback(null, null);
+               }
+               else {
+                 var r =  JSON.parse(r.body);
+                 callback(null, r); 
+               }
+
             });
           }
         },
