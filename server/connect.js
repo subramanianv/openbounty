@@ -1,7 +1,7 @@
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
+  host     : 'openbounty.cj4r07ust5tr.us-east-1.rds.amazonaws.com',
+  user     : 'ob',
   password : 'pass',
   database : "openbounty"
 });
