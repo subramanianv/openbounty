@@ -399,8 +399,18 @@ class App extends Component {
         }, (err, repoArray)=> {
           repos = repos.map((repo, i) => {
             console.log(repoArray[i]);
-            var isValidAddress = (repoArray[i] === '0x0000000000000000000000000000000000000000');
-            repo.projectHasToken = !isValidAddress
+            var repoAddress = repoAddress[i]
+            var isValidAddress = false;
+            if (repoAddress && repoAddress.length < 42) {
+              isValidAddress = false;
+            }
+            else if(repoAddress && repoAddress === '0x0000000000000000000000000000000000000000') {
+              isValidAddress = false;
+            }
+            else {
+              isValidAddress = true;
+            }
+            repo.projectHasToken = isValidAddress;
             repo.address = repoArray[i];
             return repo;
           });
