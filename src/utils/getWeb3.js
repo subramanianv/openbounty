@@ -6,7 +6,7 @@ let getWeb3 = new Promise(function(resolve, reject) {
       // Checking if Web3 has been injected by the browser (Mist/MetaMask)
       results = {
           web3: web3,
-          network_id : 3
+          network_id : 4
       }
       console.log('Injected web3 detected.');
       resolve(results)

@@ -764,6 +764,182 @@
       },
       "updated_at": 1506191800345
     },
+    "4": {
+      "links": {},
+      "events": {
+        "0x9aecf86140d81442289f667eb72e1202a8fbb3478a686659952e145e85319656": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_oldOwner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "ChangeOwner",
+          "type": "event"
+        },
+        "0x46cb989ef9cef13e930e3b7f286225a086e716a90d63e0b7da85d310a9db0c9a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "description",
+              "type": "string"
+            }
+          ],
+          "name": "newOraclizeQuery",
+          "type": "event"
+        },
+        "0x3b4a40cccf2058c593542587329dd385be4f0b588db5471fbd9598e56dd7093a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_newManager",
+              "type": "address"
+            }
+          ],
+          "name": "ManagerAdded",
+          "type": "event"
+        },
+        "0x081b1e4edf6e1eea674123e697237d853248dc6cc10c3f6546ccef33cc1d89fc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_oldManager",
+              "type": "address"
+            }
+          ],
+          "name": "ManagerDeleted",
+          "type": "event"
+        },
+        "0x7799ba4420edd6f3fc282192e3f7a72b9b6d128055f79c6cec42407ba9c13181": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_bountyHunter",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_tokenAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "_pullRequestID",
+              "type": "bytes32"
+            }
+          ],
+          "name": "SubmitWork",
+          "type": "event"
+        },
+        "0xb840e81420e07a325bbecd2904ba77f72f4124a36d2d1155731a43ec7604ba5b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_projectManager",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_bountyHunter",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "AcceptWork",
+          "type": "event"
+        },
+        "0x98e6d50e286f6a25109386201768001c4bf59fe31c6efb50941797dbeb28dacd": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_funder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "BountyFunded",
+          "type": "event"
+        },
+        "0xc43f9a0e00acf810519a4d97cfd1d9aa24e78bf118c37490df5e9acc72c22cee": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_locker",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_lockBlockTime",
+              "type": "uint256"
+            }
+          ],
+          "name": "BountyLocked",
+          "type": "event"
+        },
+        "0x9d965814776665d14e4bef706b188b58acf32b6ee34887eacb97b1f00dcf65d9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_unlocker",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_unlockBlockTime",
+              "type": "uint256"
+            }
+          ],
+          "name": "BountyUnlocked",
+          "type": "event"
+        },
+        "0x8860d15b0f9282fc4aa189fc0f3e2a47da0e9f079f8787449a7ab343c2d5998a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_bountyHunter",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_tokenAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "_etherAmount",
+              "type": "uint256"
+            }
+          ],
+          "name": "BountyCLaimed",
+          "type": "event"
+        }
+      },
+      "updated_at": 1506313918982
+    },
     "15": {
       "links": {},
       "events": {
@@ -942,5 +1118,5 @@
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1506191800345
+  "updated_at": 1506313918982
 }
