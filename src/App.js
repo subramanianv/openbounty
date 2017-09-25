@@ -232,11 +232,11 @@ class App extends Component {
               method : 'GET'
             }, function(error, r) {
                if(error || !r || !r.body) {
-                 callback(null, null);
+                 callback(null, {address : null});
                }
                else {
                  var r =  JSON.parse(r.body);
-                 callback(null, r); 
+                 callback(null, r);
                }
 
             });
