@@ -20,11 +20,10 @@ var PR_STATE = {
 
 app.use(cors())
 
-app.use(express.static(path.join(__dirname, '..', 'build')));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
-});
+
+
+
 
 
 app.get('/auth/authorize', cookieParser(), function (req, res) {
@@ -67,7 +66,7 @@ app.get('/auth/authorize', cookieParser(), function (req, res) {
 
 
 
-app.post('/events/:repoID', jsonParser, function(request, response) {
+app.post('api/events/:repoID', jsonParser, function(request, response) {
 	var body = request.body;
 	var repoID = request.params.repoID;
 	var repoOwner = request.body.repository.owner.id;
@@ -143,8 +142,10 @@ app.put('/PR/:PR_ID/close', function(request, response) {
 });
 
 app.get('/userAddress', function(request, response) {
+	console.log('I am here');
 	var login = request.query.login;
 	sql.query("select address from users where username=?",[login], function(error, x) {
+		console.log(error, x);
 		response.json(x[0]);
 	})
 })
@@ -176,6 +177,12 @@ app.post('/userAddress', jsonParser, function(request, response) {
 		return response.end("lol")
 	}
 });
+
+app.get('/*', function (req, res) {
+	console.log();
+	res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+});
+
 
 app.listen(8000, function() {
   console.log('Server is listening on', 8000)
