@@ -1,4 +1,4 @@
-http://ec2-52-70-244-8.compute-1.amazonaws.com:8000/import React, { Component } from 'react';
+import React, { Component } from 'react';
 import cookie from 'react-cookies'
 import './App.css';
 import * as xhr from 'xhr';
