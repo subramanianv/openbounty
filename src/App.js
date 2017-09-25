@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+http://ec2-52-70-244-8.compute-1.amazonaws.com:8000/import React, { Component } from 'react';
 import cookie from 'react-cookies'
 import './App.css';
 import * as xhr from 'xhr';
@@ -68,7 +68,7 @@ class App extends Component {
         debugger;
         xhr({
             method : "POST",
-            uri : 'http://localhost:8000/userAddress',
+            uri : 'http://ec2-52-70-244-8.compute-1.amazonaws.com:8000/userAddress',
             body : JSON.stringify(body),
             headers: {
               "Content-Type": "application/json"
@@ -93,7 +93,7 @@ class App extends Component {
           return new Promise((resolve, reject) => {
             xhr({
               method : "PUT",
-              uri : "http://localhost:8000/PR/" + id + "/close",
+              uri : "http://ec2-52-70-244-8.compute-1.amazonaws.com:8000/PR/" + id + "/close",
               body : null
             },
             (error, r) => {
@@ -125,7 +125,7 @@ class App extends Component {
           return new Promise((resolve, reject) => {
             xhr({
               method: "put",
-              uri: "http://localhost:8000/PR/" + id + "/tokens/" + numTokens,
+              uri: "http://ec2-52-70-244-8.compute-1.amazonaws.com:8000/PR/" + id + "/tokens/" + numTokens,
               body : null
             }, (err, result) => {
               debugger;
@@ -181,7 +181,7 @@ class App extends Component {
           debugger;
           xhr({
             method :'GET',
-            uri : 'http://localhost:8000/PR/' + repo.id,
+            uri : 'http://ec2-52-70-244-8.compute-1.amazonaws.com:8000/PR/' + repo.id,
 
           }, (error, PRs) => {
             PRs = JSON.parse(PRs.body);
@@ -228,7 +228,7 @@ class App extends Component {
           userInfo : function(callback) {
             debugger;
             xhr({
-              uri : 'http://localhost:8000/userAddress?login=' + self.state.login,
+              uri : 'http://ec2-52-70-244-8.compute-1.amazonaws.com:8000/userAddress?login=' + self.state.login,
               method : 'GET'
             }, function(error, r) {
                 var r =  JSON.parse(r.body);
@@ -260,7 +260,7 @@ class App extends Component {
           "label"
         ],
         "config": {
-          "url": "http://30a80673.ngrok.io/events/" + options.repo.id,
+          "url": "http://ec2-52-70-244-8.compute-1.amazonaws.com:8000/events/" + options.repo.id,
           "content_type": "json"
         }
       };
