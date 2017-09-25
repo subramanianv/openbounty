@@ -7,8 +7,7 @@ var jsonParser = bodyParser.json();
 var cors = require('cors')
 var _ = require('underscore');
 var ethUtils = require('ethereumjs-util');
-// var redis = require("redis");
-// var rc = redis.createClient();
+var path = require('path');
 
 var sql = require('./connect');
 var PR_STATE = {
@@ -21,7 +20,15 @@ var PR_STATE = {
 
 app.use(cors())
 
-app.get('/authorize', cookieParser(), function (req, res) {
+app.use(express.static(path.join(__dirname, '..', 'build')));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+});
+
+
+app.get('/auth/authorize', cookieParser(), function (req, res) {
+	console.log('I am here');
 	var code = req.query.code;
 	var state = req.query.state;
 	var token_url = "https://github.com/login/oauth/access_token";
@@ -49,7 +56,7 @@ app.get('/authorize', cookieParser(), function (req, res) {
 			res.cookie('accessToken',accessToken, { maxAge: 900000});
 			//
 			// res.writeHead(200, {'Set-Cookie' : 'login='+ userProf.login + ';accessToken='+accessToken});
-			var s = '<script>window.location.href = "http://localhost:3000/"</script>'
+			var s = '<script>window.location.href = "http://localhost:5000/"</script>'
 			var x = '<html><head>' + s + '</head><body></body></html>'
 			res.end(x);
 		});
