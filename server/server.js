@@ -55,7 +55,7 @@ app.get('/auth/authorize', cookieParser(), function (req, res) {
 			res.cookie('accessToken',accessToken, { maxAge: 900000});
 			//
 			// res.writeHead(200, {'Set-Cookie' : 'login='+ userProf.login + ';accessToken='+accessToken});
-			var s = '<script>window.location.href = "http://ec2-52-70-244-8.compute-1.amazonaws.com:8000/"</script>'
+			var s = '<script>window.location.href = "http://ec2-52-70-244-8.compute-1.amazonaws.com:5000/"</script>'
 			var x = '<html><head>' + s + '</head><body></body></html>'
 			res.end(x);
 		});
