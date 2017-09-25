@@ -55,7 +55,7 @@ app.get('/auth/authorize', cookieParser(), function (req, res) {
 			res.cookie('accessToken',accessToken, { maxAge: 900000});
 			//
 			// res.writeHead(200, {'Set-Cookie' : 'login='+ userProf.login + ';accessToken='+accessToken});
-			var s = '<script>window.location.href = "http://ec2-52-70-244-8.compute-1.amazonaws.com:5000/"</script>'
+			var s = '<script>window.location.href = "http://ec2-34-227-238-42.compute-1.amazonaws.com:5000/"</script>'
 			var x = '<html><head>' + s + '</head><body></body></html>'
 			res.end(x);
 		});
@@ -66,7 +66,7 @@ app.get('/auth/authorize', cookieParser(), function (req, res) {
 
 
 
-app.post('api/events/:repoID', jsonParser, function(request, response) {
+app.post('/events/:repoID', jsonParser, function(request, response) {
 	var body = request.body;
 	var repoID = request.params.repoID;
 	var repoOwner = request.body.repository.owner.id;
@@ -87,6 +87,7 @@ app.post('api/events/:repoID', jsonParser, function(request, response) {
 				title : body.pull_request.title
 			}
 			sql.query("insert into pull_request SET ?", data, console.log);
+			sql.query("insert ignore into users set user_id=?, username=?",[body.pull_request.head.user.id, body.pull_request.head.user.login],console.log)
 			console.log(body.pull_request.id, body.pull_request.title, body.pull_request.head.user.login);
 			break;
 		case "closed":
