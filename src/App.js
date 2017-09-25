@@ -398,8 +398,7 @@ class App extends Component {
           instance.getJobTracker.call(repo.id, _c);
         }, (err, repoArray)=> {
           repos = repos.map((repo, i) => {
-            console.log(repoArray[i]);
-            var repoAddress = repoAddress[i]
+            var repoAddress = repoArray[i]
             var isValidAddress = false;
             if (repoAddress && repoAddress.length < 42) {
               isValidAddress = false;
