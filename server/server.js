@@ -55,7 +55,7 @@ app.get('/auth/authorize', cookieParser(), function (req, res) {
 			res.cookie('accessToken',accessToken, { domain: '.openbounty.co', maxAge: 900000});
 			//
 			// res.writeHead(200, {'Set-Cookie' : 'login='+ userProf.login + ';accessToken='+accessToken});
-			var s = '<script>window.location.href = "http://ec2-34-227-238-42.compute-1.amazonaws.com:5000/"</script>'
+			var s = '<script>window.location.href = "http://openbounty.co/"</script>'
 			var x = '<html><head>' + s + '</head><body></body></html>'
 			res.end(x);
 		});
