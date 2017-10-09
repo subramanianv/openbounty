@@ -183,9 +183,8 @@ app.post('/userAddress', jsonParser, function(request, response) {
 	}
 });
 
-app.get('/*', function (req, res) {
-	console.log();
-	res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+app.get('/healthcheck', function (request, response) {
+	response.json('healthcheck');
 });
 
 
