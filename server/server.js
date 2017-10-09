@@ -51,8 +51,8 @@ app.get('/auth/authorize', cookieParser(), function (req, res) {
 		_req.get(options , function(err, httpResponse, b) {
 			var userProf = JSON.parse(b);
 			console.log(userProf.login);
-			res.cookie('login',userProf.login, { maxAge: 900000});
-			res.cookie('accessToken',accessToken, { maxAge: 900000});
+			res.cookie('login',userProf.login, { domain: '.openbounty.co', maxAge: 900000});
+			res.cookie('accessToken',accessToken, { domain: '.openbounty.co', maxAge: 900000});
 			//
 			// res.writeHead(200, {'Set-Cookie' : 'login='+ userProf.login + ';accessToken='+accessToken});
 			var s = '<script>window.location.href = "http://ec2-34-227-238-42.compute-1.amazonaws.com:5000/"</script>'
