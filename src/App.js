@@ -68,7 +68,7 @@ class App extends Component {
         debugger;
         xhr({
             method : "POST",
-            uri : 'http://ec2-34-227-238-42.compute-1.amazonaws.com:8000/userAddress',
+            uri : 'http://api.openbounty.co/userAddress',
             body : JSON.stringify(body),
             headers: {
               "Content-Type": "application/json"
@@ -93,7 +93,7 @@ class App extends Component {
           return new Promise((resolve, reject) => {
             xhr({
               method : "PUT",
-              uri : "http://ec2-34-227-238-42.compute-1.amazonaws.com:8000/PR/" + id + "/close",
+              uri : "http://api.openbounty.co/PR/" + id + "/close",
               body : null
             },
             (error, r) => {
@@ -125,7 +125,7 @@ class App extends Component {
           return new Promise((resolve, reject) => {
             xhr({
               method: "put",
-              uri: "http://ec2-34-227-238-42.compute-1.amazonaws.com:8000/PR/" + id + "/tokens/" + numTokens,
+              uri: "http://api.openbounty.co/PR/" + id + "/tokens/" + numTokens,
               body : null
             }, (err, result) => {
               debugger;
@@ -181,7 +181,7 @@ class App extends Component {
           debugger;
           xhr({
             method :'GET',
-            uri : 'http://ec2-34-227-238-42.compute-1.amazonaws.com:8000/PR/' + repo.id,
+            uri : 'http://api.openbounty.co/PR/' + repo.id,
 
           }, (error, PRs) => {
             PRs = JSON.parse(PRs.body);
@@ -228,7 +228,7 @@ class App extends Component {
           userInfo : function(callback) {
             debugger;
             xhr({
-              uri : 'http://ec2-34-227-238-42.compute-1.amazonaws.com:8000/userAddress?login=' + self.state.login,
+              uri : 'http://api.openbounty.co/userAddress?login=' + self.state.login,
               method : 'GET'
             }, function(error, r) {
                if(error || !r || !r.body) {
@@ -266,7 +266,7 @@ class App extends Component {
           "label"
         ],
         "config": {
-          "url": "http://ec2-34-227-238-42.compute-1.amazonaws.com:8000/events/" + options.repo.id,
+          "url": "http://api.openbounty.co/events/" + options.repo.id,
           "content_type": "json"
         }
       };
